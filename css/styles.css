@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+body {
+  margin: 0 auto;
+  background-color: var(--dark-cyan);
+  background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 45vw bottom 45vh, left 45vw top 45vh;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.container {
+  margin: 140px auto;
+  max-width: 325px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.25);
+}
+.profile-card {
+  background-color: white;
+}
+.profile__banner {
+  width: 100%;
+}
+.profile__image {
+  display: flex;
+  position: relative;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: -55px auto 0;
+}
+.profile__content {
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: center;
+}
+.profile__content h2 {
+  font-size: 18px;
+  color: var(--very-dark-blue);
+}
+.profile__content span {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  opacity: 0.9;
+}
+.profile__content p {
+  color: var(--dark-grayish-blue);
+  font-size: 12px;
+  font-size: 400;
+  margin: 0;
+  opacity: 0.9;
+}
+.line {
+  background-color: var(--dark-gray);
+  opacity: 0.3;
+  height: 1px;
+  margin: 25px auto 0;
+}
+.profile__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 25px;
+}
+.profile__stats h2 {
+  margin: 0 auto 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    background-position: right 50vw bottom 40vh, left 50vw top 47vh;
+  }
+}
